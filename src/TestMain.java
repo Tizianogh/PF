@@ -1,17 +1,23 @@
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import Exercice3Generic.Arbre;
+import Exercice3Generic.Feuille;
+import Exercice3Generic.Noeud;
+
+import java.util.*;
 
 class TestMain {
     public static void main(String[] args) {
-        Set<Integer> test = new HashSet<>();
+        System.out.println(arbre1());
+    }
 
-        test.add(10);
-        test.add(0);
-        test.add(-4);
-        test.add(23);
-        test.add(100);
+    public static Arbre arbre1() {
+        List<Arbre> listTrees = new ArrayList<>();
 
-        System.out.println(Collections.);
+
+        Arbre f1 = new Feuille("Test");
+        Arbre f2 = new Feuille(2);
+        Arbre f3 = new Feuille(10.00);
+        Arbre f4 = new Noeud(Set.of(f1,f2,f3));
+
+        return f4;
     }
 }

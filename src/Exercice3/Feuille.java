@@ -1,9 +1,14 @@
-import Exercice3.Arbre;
+package Exercice3;
+
 
 import java.util.Set;
 
 class Feuille implements Arbre {
-    int valeur;
+    private int valeur;
+
+    public Feuille(int valeur) {
+        this.valeur = valeur;
+    }
 
     @Override
     public int taille() {
@@ -17,7 +22,7 @@ class Feuille implements Arbre {
 
     @Override
     public Set<Integer> valeurs() {
-        return null;
+        return Set.of(valeur);
     }
 
     @Override

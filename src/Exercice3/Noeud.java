@@ -1,8 +1,6 @@
-import Exercice3.Arbre;
+package Exercice3;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 class Noeud implements Arbre {
     private Set<Arbre> fils;
@@ -13,8 +11,11 @@ class Noeud implements Arbre {
 
     @Override
     public int taille() {
-
-        return 0;
+        int tot = 0;
+        for (Arbre f : fils) {
+            tot += f.taille();
+        }
+        return tot;
     }
 
     @Override
@@ -40,7 +41,7 @@ class Noeud implements Arbre {
     public Integer somme() {
         int tot = 0;
         for (Arbre f : fils) {
-            tot += f.taille();
+            tot += f.somme();
         }
         return tot;
     }
@@ -57,11 +58,14 @@ class Noeud implements Arbre {
 
     @Override
     public boolean estTrie() {
+        List<Arbre> transformedSetToList = new ArrayList<>(fils);
 
-        for (int i = 0; i < fils.size() - 1; i++) {
-            if (fils[i] > fils[i + 1]) {
-                return true;
+        for (int i = 0; i < this.fils.size(); i++) {
+            if (transformedSetToList.get(i).min() > transformedSetToList.get(i + 1).min()) {
+                return false;
             }
+            this.estTrie();
         }
+        return true;
     }
 }
