@@ -1,0 +1,36 @@
+String::lowercase : Nous avons toujours un résultat, il est toujours le même si on donne à chaque fois la même chaîne -> cette fonction est pure donc fonctionnelle.
+
+Math::max : Si pas d’entrée, alors une erreur est soulevée=> pas fonctionnelle.
+
+Math::sin : Quelque soit l’entrée, la sortie sera la même et il on aura toujours un résultat => cette fonction est pure donc fonctionnelle.
+
+List::add : On ajoute donc forcément un changement d’état => pas fonctionnelle.
+
+List::size : Quelque soit l’entrée, la sortie sera la même et il y aura toujours un résultat => cette fonction est pure donc fonctionnelle
+List::contains : SI je transmet null alors elle renvoie une exception => pas fonctionnelle
+
+Integer::valueOf :  Quelque soit l’entrée, la sortie sera la même et il on aura toujours un résultat => cette fonction est pure donc fonctionnelle.
+
+File::length : Ici, il dépend d’un support externe (ici un fichier) donc non pure.
+
+M1 : Peu importe l’entrée, nous n’avons pas de sortie. Donc elle n’est pas total donc pas fonctionnelle.
+
+M2 : a étant variable, la valeur de sortie ne sera pas la même donc elle n’est pas fonctionnelle	.
+
+M3 : étant donné que c’est de l’IO, non fonctionnelle.
+
+M4 : fonctionnelle puisque je ne dépend d’aucunes variables d’intérieur
+
+M5 : a étant variable, pas fonctionnelle.
+
+M6 : b étant variable, pas fonctionnelle
+
+M7 : fonctionnelle puisque C est static, donc elle ne bougera jamais
+
+M8 : Cette fonction est fonctionnelle puisqu’il n’y aucun moyen de changer la valeur.
+
+M9 : pas fonctionnelle
+
+M10 : fonctionnelle
+
+M11 : mutation à l’intérieur autorisé donc elle est fonctionnelle

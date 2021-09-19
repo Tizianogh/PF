@@ -1,4 +1,4 @@
-package Exercice2;
+package Exercice3;
 
 import java.util.Set;
 
