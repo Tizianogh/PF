@@ -16,8 +16,9 @@ class TestMain {
         Arbre f1 = new Feuille("Test");
         Arbre f2 = new Feuille(2);
         Arbre f3 = new Feuille(10.00);
-        Arbre f4 = new Noeud(Set.of(f1,f2,f3));
+        Arbre f4 = new Feuille(10f);
+        Arbre f5 = new Noeud(Set.of(f1, f2, f3, f4));
 
-        return f4;
+        return f5;
     }
 }
