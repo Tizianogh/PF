@@ -1,8 +1,9 @@
 package Exercice3Generic;
 
+import java.util.List;
 import java.util.Set;
 
-public class Feuille <T> implements Arbre<T> {
+public class Feuille <T,S> implements Arbre<T>, Sommable<S> {
     private T i;
 
     public Feuille(T i) {
@@ -31,4 +32,8 @@ public class Feuille <T> implements Arbre<T> {
                 '}';
     }
 
+    @Override
+    public S sommer(List<S> valeurs) {
+        return (S) this.i;
+    }
 }

@@ -1,6 +1,8 @@
 package Exercice3Generic;
 
+import java.util.List;
+
 public interface Sommable<T> {
 
-    T sommer(T entier);
+    T sommer(List<T> valeurs);
 }

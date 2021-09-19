@@ -2,7 +2,7 @@ package Exercice3Generic;
 
 import java.util.*;
 
-public class Noeud<T> implements Arbre<T> {
+public class Noeud<T,S implements Arbre<T>, Sommable<S> {
     private Set<Arbre> fils;
 
     public Noeud(Set<Arbre> fils) {
@@ -42,5 +42,10 @@ public class Noeud<T> implements Arbre<T> {
         return "Noeud{" +
                 "fils=" + fils +
                 '}';
+    }
+
+    @Override
+    public S sommer(List valeurs) {
+        return null;
     }
 }
